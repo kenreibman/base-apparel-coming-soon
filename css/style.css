@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --ff-main: "Josefin Sans", sans-serif;
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+
+  --dark--grayish--red: hsl(0, 6%, 24%);
+
+  /* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+}
+
+/* CSS RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* GLOBAL */
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  background-repeat: no-repeat;
+}
+
+html {
+  font-size: 1rem;
+  font-family: var(--ff-main);
+}
+
+span {
+  font-weight: 200;
+  color: var(--desaturated-red);
+}
+
+/* HEADER */
+
+.page__header {
+  height: auto;
+  padding: 30px;
+}
+
+.logo {
+  width: 100px;
+}
+
+/* SHOWCASE */
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase__content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.showcase__img-desktop {
+  display: none;
+}
+
+.showcase__img-mobile {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.showcase__title {
+  color: var(--dark--grayish--red);
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.showcase__desc {
+  margin: 0 auto;
+  color: var(--desaturated-red);
+  font-size: 0.9rem;
+  margin-bottom: 2.3rem;
+  max-width: 450px; /* test*/
+}
+
+/* FORM */
+
+.form {
+  position: relative;
+  max-width: 700px;
+}
+
+.form__input {
+  width: 100%;
+  font-size: 0.9rem;
+  color: var(--dark--grayish--red);
+  border-radius: 50px;
+  padding: 0.7rem 0.7rem 0.7rem 1.5rem;
+  border: 1px solid var(--desaturated-red);
+  outline: none;
+  background-color: hsla(0, 100%, 98%, 10%);
+}
+
+.form__input::placeholder {
+  color: var(--soft-red);
+  font-weight: 200;
+  opacity: 0.4;
+}
+
+/* FORM ERROR */
+
+.form__icon--error {
+  display: none;
+  position: absolute;
+  right: 80px;
+  top: 12px;
+}
+
+.form__msg--error {
+  display: none;
+  position: absolute;
+  left: 25px;
+  font-size: 0.8rem;
+  top: 55px;
+  color: var(--soft-red);
+}
+
+/* FORM ERROR classList add/remove */
+.form.error .form__icon--error {
+  display: block;
+}
+
+.form.error .form__msg--error {
+  display: block;
+}
+
+.form.error .form__input {
+  border: 2px solid var(--soft-red);
+}
+
+/* BUTTON > */
+.form__button {
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 65px;
+  border-radius: 50px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0px 0px 18px 1px hsla(0, 36%, 70%, 0.466);
+}
+
+.form__button img {
+  margin: 0 auto;
+}
+
+.form__button:hover {
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    hsla(0, 52%, 80%, 0.781)
+  );
+  box-shadow: 0px 0px 13px 2px #f4aaabbf;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 768px) {
+  .page__header {
+    position: absolute;
+    padding-left: 11.5%;
+    transform: translateY(38px);
+  }
+
+  .logo {
+    width: 155px;
+  }
+  .showcase {
+    flex-direction: row-reverse;
+    min-width: 100%;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .showcase__content {
+    width: 100%;
+    text-align: left;
+    padding: 0rem;
+    margin-top: 25vh;
+    padding-left: 11.5%;
+    padding-right: 11.5%;
+  }
+
+  .showcase__title {
+    color: var(--dark--grayish--red);
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .showcase__desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0rem 0rem 2.5rem 0rem;
+  }
+
+  .form {
+    max-width: 445px;
+  }
+
+  .form__input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem 0.7rem 1rem 2rem;
+  }
+
+  .form__button {
+    width: 95px;
+  }
+
+  /* FORM ERROR (DESKTOP) */
+
+  .form__icon--error {
+    display: none;
+    position: absolute;
+    right: 116px;
+    top: 16px;
+  }
+
+  .form__msg--error {
+    display: none;
+    position: absolute;
+    left: 33px;
+    font-size: 0.8rem;
+    top: 65px;
+    color: var(--soft-red);
+  }
+
+  .showcase__img {
+    width: 95%;
+  }
+
+  .showcase__img-desktop {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+  }
+  .showcase__img-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .showcase__title {
+    font-size: 6rem;
+  }
+
+  .showcase__desc {
+    font-size: 1.5rem;
+  }
+
+  .form {
+    max-width: 550px;
+  }
+}
