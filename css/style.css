@@ -110,11 +110,11 @@ span {
 
 .page__header {
   height: auto;
-  padding: 30px;
+  padding: 1.875rem;
 }
 
 .logo {
-  width: 100px;
+  width: 6.25rem;
 }
 
 /* SHOWCASE */
@@ -155,21 +155,21 @@ span {
   color: var(--desaturated-red);
   font-size: 0.9rem;
   margin-bottom: 2.3rem;
-  max-width: 450px; /* test*/
+  max-width: 28.125rem;
 }
 
 /* FORM */
 
 .form {
   position: relative;
-  max-width: 700px;
+  max-width: 43.75rem;
 }
 
 .form__input {
   width: 100%;
   font-size: 0.9rem;
   color: var(--dark--grayish--red);
-  border-radius: 50px;
+  border-radius: 3.125rem;
   padding: 0.7rem 0.7rem 0.7rem 1.5rem;
   border: 1px solid var(--desaturated-red);
   outline: none;
@@ -187,16 +187,16 @@ span {
 .form__icon--error {
   display: none;
   position: absolute;
-  right: 80px;
-  top: 12px;
+  right: 5rem;
+  top: 0.75rem;
 }
 
 .form__msg--error {
   display: none;
   position: absolute;
-  left: 25px;
+  left: 1.563rem;
   font-size: 0.8rem;
-  top: 55px;
+  top: 3.438rem;
   color: var(--soft-red);
 }
 
@@ -222,8 +222,8 @@ span {
   right: 0;
   top: 0;
   height: 100%;
-  width: 65px;
-  border-radius: 50px;
+  width: 4.063rem;
+  border-radius: 3.125rem;
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   box-shadow: 0px 0px 18px 1px hsla(0, 36%, 70%, 0.466);
 }
@@ -243,15 +243,15 @@ span {
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48rem) {
   .page__header {
     position: absolute;
     padding-left: 11.5%;
-    transform: translateY(38px);
+    transform: translateY(2.375rem);
   }
 
   .logo {
-    width: 155px;
+    width: 9.688rem;
   }
   .showcase {
     flex-direction: row-reverse;
@@ -288,7 +288,7 @@ span {
   }
 
   .form {
-    max-width: 445px;
+    max-width: 27.813rem;
   }
 
   .form__input {
@@ -298,7 +298,7 @@ span {
   }
 
   .form__button {
-    width: 95px;
+    width: 5.938rem;
   }
 
   /* FORM ERROR (DESKTOP) */
@@ -306,16 +306,16 @@ span {
   .form__icon--error {
     display: none;
     position: absolute;
-    right: 116px;
-    top: 16px;
+    right: 7.25rem;
+    top: 1rem;
   }
 
   .form__msg--error {
     display: none;
     position: absolute;
-    left: 33px;
+    left: 2.063rem;
     font-size: 0.8rem;
-    top: 65px;
+    top: 4.063rem;
     color: var(--soft-red);
   }
 
@@ -335,7 +335,7 @@ span {
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 93.75rem) {
   .showcase__title {
     font-size: 6rem;
   }
@@ -345,6 +345,6 @@ span {
   }
 
   .form {
-    max-width: 550px;
+    max-width: 34.375rem;
   }
 }
