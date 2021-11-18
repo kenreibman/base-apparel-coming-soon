@@ -44,8 +44,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-using-css-vanilla-javascript-and-bem-smNqsag5F)
+- Live Site URL: [live site URL](https://lmaoken.github.io/base-apparel-coming-soon/)
 
 ## My process
 
